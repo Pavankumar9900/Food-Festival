@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen Z Indian Food Festival</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Righteous&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1d;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            background-image: url("https://img.freepik.com/free-photo/photorealistic-lohri-festival-celebration-with-traditional-food_23-2151098302.jpg?t=st=1729242588~exp=1729246188~hmac=f093867952152e3f0d8a9025797c76e803b4bf21b3d2c9b6368794fcf8f344b4&w=996");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Color Scheme */
+        :root {
+            --primary-color: #ff0054;
+            --secondary-color: #ffcc29;
+            --background-color: #1a1a1d;
+            --highlight-color: #1affd5;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://cdn.pixabay.com/photo/2021/08/04/09/36/pani-puri-6521722_1280.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0.89;
+        }
+
+
+        .hero-content {
+            color: white;
+        }
+
+        .title {
+            font-family: 'Righteous', cursive;
+            font-size: 4rem;
+            color: var(--primary-color);
+            animation: titleSlideIn 1s ease-out forwards;
+        }
+
+        @keyframes titleSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: var(--secondary-color);
+            animation: subtitleFadeIn 1.5s ease-in forwards;
+        }
+
+        @keyframes subtitleFadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            margin: 10px;
+            transition: 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 0, 84, 0.4);
+        }
+
+        .cta-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .highlights {
+            padding: 50px;
+            background-color: var(--background-color);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .highlights-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .highlight {
+            width: 30%;
+            background-color: #2a2b2e;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .highlight:hover {
+            transform: scale(1.05);
+        }
+
+        .highlight img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .highlight h3 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        .highlight p {
+            color: #ffffffcc;
+            margin-top: 10px;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+
+        #timer {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        #days,
+        #hours,
+        #minutes,
+        #seconds {
+            margin: 0 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 20px;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 768px) {
+            .highlights-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .highlight {
+                width: 100%;
+            }
+
+            .title {
+                font-size: 3rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="title">Flavor Fest 2024</h1>
+            <p class="subtitle">A Journey Through India's Street Food Culture</p>
+            <a href="#tickets" class="cta-btn">Get Tickets Now</a>
+        </div>
+    </header>
+
+    <!-- Highlights Section -->
+    <section class="highlights" id="explore">
+        <h2 class="section-title">Why Join?</h2>
+        <div class="highlights-container">
+            <div class="highlight">
+                <img src="chaat.jpg" alt="Chaat">
+                <h3>Desi Chaat</h3>
+                <p>Authentic flavors from India's street corners, packed with spices and flavors.</p>
+            </div>
+            <div class="highlight">
+                <img src="tandoori.jpg" alt="Tandoori">
+                <h3>Tandoori Specials</h3>
+                <p>Sizzling grills and smoky tandoor flavors straight from the heart of India.</p>
+            </div>
+            <div class="highlight">
+                <img src="Deserts.jpg" alt="Desserts">
+                <h3>Sweet Endings</h3>
+                <p>Indulge in the most mouth-watering Indian sweets and desserts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="countdown">
+        <h2>Countdown to the Fest</h2>
+        <div id="timer">
+            <span id="days">00</span> Days
+            <span id="hours">00</span> Hours
+            <span id="minutes">00</span> Minutes
+            <span id="seconds">00</span> Seconds
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Flavor Fest | Follow us on
+            <a href="#">Instagram</a>,
+            <a href="#">Facebook</a>,
+            and
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+    <script>
+        const eventDate = new Date("2024-12-01T10:00:00").getTime(); // Set your event date here
+        const countdownElement = {
+            days: document.getElementById("days"),
+            hours: document.getElementById("hours"),
+            minutes: document.getElementById("minutes"),
+            seconds: document.getElementById("seconds"),
+        };
+
+        // Function to Update Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            // Calculate time components
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update countdown display
+            countdownElement.days.innerHTML = days;
+            countdownElement.hours.innerHTML = hours;
+            countdownElement.minutes.innerHTML = minutes;
+            countdownElement.seconds.innerHTML = seconds;
+
+            // Clear the timer when the countdown is finished
+            if (distance < 0) {
+                clearInterval(interval);
+                countdownElement.days.innerHTML = "00";
+                countdownElement.hours.innerHTML = "00";
+                countdownElement.minutes.innerHTML = "00";
+                countdownElement.seconds.innerHTML = "00";
+            }
+        }
+
+        // Update the countdown every second
+        const interval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>
